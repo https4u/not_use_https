@@ -1,0 +1,255 @@
+# Nmap 7.50 scan initiated Thu Jul 20 17:19:50 2017 as: nmap -Av -oN accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com.txt accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com
+Increasing send delay for 190.14.37.163 from 0 to 5 due to 31 out of 102 dropped probes since last increase.
+Nmap scan report for accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com (190.14.37.163)
+Host is up (0.24s latency).
+Not shown: 985 closed ports
+PORT     STATE    SERVICE      VERSION
+21/tcp   open     ftp          Pure-FTPd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x    2 0          0                4096 Dec 23  2015 .
+|_drwxr-xr-x    2 0          0                4096 Dec 23  2015 ..
+25/tcp   open     smtp         Postfix smtpd
+|_smtp-commands: 9579cb.offshoreracks.com, PIPELINING, SIZE 204800000, ETRN, STARTTLS, AUTH PLAIN LOGIN, AUTH=PLAIN LOGIN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Issuer: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-07-11T23:28:35
+| Not valid after:  2027-07-09T23:28:35
+| MD5:   d419 5374 d5f6 11e5 0d33 7aa2 f632 f828
+|_SHA-1: a370 5b99 d8fb 932b c315 e937 1656 b318 5b61 1d32
+|_ssl-date: 2017-07-20T09:20:50+00:00; 0s from scanner time.
+53/tcp   open     domain       ISC BIND 9.9.4
+| dns-nsid: 
+|_  bind.version: 9.9.4-RedHat-9.9.4-50.el7_3.1
+80/tcp   open     http         Apache httpd 2.4.26 ((Unix) OpenSSL/1.0.1e-fips)
+|_http-favicon: Unknown favicon MD5: 28EC4EABA5AE210B98A11257CAF5BADE
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Apache/2.4.26 (Unix) OpenSSL/1.0.1e-fips
+|_http-title: Did not follow redirect to /login
+110/tcp  open     pop3         Dovecot pop3d
+|_pop3-capabilities: TOP RESP-CODES CAPA PIPELINING STLS USER SASL(PLAIN LOGIN) AUTH-RESP-CODE UIDL
+| ssl-cert: Subject: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Issuer: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-07-11T23:28:35
+| Not valid after:  2027-07-09T23:28:35
+| MD5:   d419 5374 d5f6 11e5 0d33 7aa2 f632 f828
+|_SHA-1: a370 5b99 d8fb 932b c315 e937 1656 b318 5b61 1d32
+|_ssl-date: 2017-07-20T09:20:52+00:00; 0s from scanner time.
+143/tcp  open     imap         Dovecot imapd
+|_imap-capabilities: AUTH=LOGINA0001 post-login listed SASL-IR AUTH=PLAIN LOGIN-REFERRALS OK LITERAL+ Pre-login have more ENABLE ID capabilities STARTTLS IDLE IMAP4rev1
+| ssl-cert: Subject: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Issuer: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-07-11T23:28:35
+| Not valid after:  2027-07-09T23:28:35
+| MD5:   d419 5374 d5f6 11e5 0d33 7aa2 f632 f828
+|_SHA-1: a370 5b99 d8fb 932b c315 e937 1656 b318 5b61 1d32
+|_ssl-date: 2017-07-20T09:20:52+00:00; 0s from scanner time.
+443/tcp  open     ssl/ssl      Apache httpd (SSL-only mode)
+|_http-favicon: Unknown favicon MD5: 28EC4EABA5AE210B98A11257CAF5BADE
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Apache/2.4.26 (Unix) OpenSSL/1.0.1e-fips
+|_http-title: 400 Bad Request
+| ssl-cert: Subject: commonName=accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com
+| Subject Alternative Name: DNS:accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com
+| Issuer: commonName=Let's Encrypt Authority X3/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2017-07-13T02:22:00
+| Not valid after:  2017-10-11T02:22:00
+| MD5:   bd77 0da6 2e45 118a ed93 73e1 62cb b6f9
+|_SHA-1: 1efa fee4 09c1 a097 6884 b646 88b4 abe6 58f4 d819
+|_ssl-date: 2017-07-20T09:20:48+00:00; 0s from scanner time.
+445/tcp  filtered microsoft-ds
+465/tcp  open     ssl/smtp     Postfix smtpd
+|_smtp-commands: 9579cb.offshoreracks.com, PIPELINING, SIZE 204800000, ETRN, AUTH PLAIN LOGIN, AUTH=PLAIN LOGIN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Issuer: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-07-11T23:28:35
+| Not valid after:  2027-07-09T23:28:35
+| MD5:   d419 5374 d5f6 11e5 0d33 7aa2 f632 f828
+|_SHA-1: a370 5b99 d8fb 932b c315 e937 1656 b318 5b61 1d32
+|_ssl-date: 2017-07-20T09:20:42+00:00; -2s from scanner time.
+587/tcp  open     smtp         Postfix smtpd
+|_smtp-commands: 9579cb.offshoreracks.com, PIPELINING, SIZE 204800000, ETRN, STARTTLS, AUTH PLAIN LOGIN, AUTH=PLAIN LOGIN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Issuer: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-07-11T23:28:35
+| Not valid after:  2027-07-09T23:28:35
+| MD5:   d419 5374 d5f6 11e5 0d33 7aa2 f632 f828
+|_SHA-1: a370 5b99 d8fb 932b c315 e937 1656 b318 5b61 1d32
+|_ssl-date: 2017-07-20T09:20:50+00:00; 0s from scanner time.
+993/tcp  open     ssl/imap     Dovecot imapd
+|_imap-capabilities: LITERAL+ more Pre-login AUTH=LOGINA0001 post-login have LOGIN-REFERRALS listed IDLE AUTH=PLAIN ENABLE ID capabilities SASL-IR IMAP4rev1 OK
+| ssl-cert: Subject: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Issuer: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-07-11T23:28:35
+| Not valid after:  2027-07-09T23:28:35
+| MD5:   d419 5374 d5f6 11e5 0d33 7aa2 f632 f828
+|_SHA-1: a370 5b99 d8fb 932b c315 e937 1656 b318 5b61 1d32
+|_ssl-date: 2017-07-20T09:20:44+00:00; -1s from scanner time.
+995/tcp  open     ssl/pop3     Dovecot pop3d
+|_pop3-capabilities: UIDL SASL(PLAIN LOGIN) RESP-CODES USER TOP PIPELINING AUTH-RESP-CODE CAPA
+| ssl-cert: Subject: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Issuer: commonName=9579cb.offshoreracks.com/organizationName=CentOS Web Panel/stateOrProvinceName=Zagreb/countryName=HR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2017-07-11T23:28:35
+| Not valid after:  2027-07-09T23:28:35
+| MD5:   d419 5374 d5f6 11e5 0d33 7aa2 f632 f828
+|_SHA-1: a370 5b99 d8fb 932b c315 e937 1656 b318 5b61 1d32
+|_ssl-date: 2017-07-20T09:20:45+00:00; 0s from scanner time.
+2030/tcp open     http         PHP 7.0.17
+| fingerprint-strings: 
+|   DNSVersionBindReq: 
+|     HTTP/1.1 400 Bad Request
+|     Server: cwpsrv
+|     Date: Thu, 20 Jul 2017 09:20:37 GMT
+|     Content-Type: text/html
+|     Content-Length: 167
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cwpsrv</center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Server: cwpsrv
+|     Date: Thu, 20 Jul 2017 09:20:30 GMT
+|     Content-Type: text/html; charset=UTF-8
+|     Connection: close
+|     X-Powered-By: PHP/7.0.17
+|     Set-Cookie: cwpsrv-6399a5cbdae68add3db36ca7f079da0c=i6n3oklpctca6b5snhdg8cakn4; path=/
+|     Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Pragma: no-cache
+|     Location: /login/index.php
+|   HTTPOptions: 
+|     HTTP/1.1 405 Not Allowed
+|     Server: cwpsrv
+|     Date: Thu, 20 Jul 2017 09:20:35 GMT
+|     Content-Type: text/html
+|     Content-Length: 167
+|     Connection: close
+|     <html>
+|     <head><title>405 Not Allowed</title></head>
+|     <body bgcolor="white">
+|     <center><h1>405 Not Allowed</h1></center>
+|     <hr><center>cwpsrv</center>
+|     </body>
+|     </html>
+|   Help: 
+|     HTTP/1.1 400 Bad Request
+|     Server: cwpsrv
+|     Date: Thu, 20 Jul 2017 09:20:38 GMT
+|     Content-Type: text/html
+|     Content-Length: 167
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cwpsrv</center>
+|     </body>
+|     </html>
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Server: cwpsrv
+|     Date: Thu, 20 Jul 2017 09:20:36 GMT
+|     Content-Type: text/html
+|     Content-Length: 167
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cwpsrv</center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     <hr><center>cwpsrv</center>
+|     </body>
+|_    </html>
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: cwpsrv
+| http-title: Login | CentOS WebPanel
+|_Requested resource was /login/index.php
+2222/tcp open     ssh          OpenSSH 6.6.1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 45:f2:64:1a:34:00:53:a7:a9:22:91:81:d6:ca:97:89 (RSA)
+|   256 8c:fc:f5:85:bc:b8:71:57:0d:7e:7d:77:b2:1e:d3:ec (ECDSA)
+|_  256 b7:fc:3a:cf:51:3c:62:53:f5:40:2d:63:91:e5:4f:fd (EdDSA)
+3306/tcp open     mysql        MariaDB (unauthorized)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port2030-TCP:V=7.50%I=7%D=7/20%Time=597075DE%P=x86_64-apple-darwin16.6.
+SF:0%r(GetRequest,182,"HTTP/1\.1\x20302\x20Found\r\nServer:\x20cwpsrv\r\nD
+SF:ate:\x20Thu,\x2020\x20Jul\x202017\x2009:20:30\x20GMT\r\nContent-Type:\x
+SF:20text/html;\x20charset=UTF-8\r\nConnection:\x20close\r\nX-Powered-By:\
+SF:x20PHP/7\.0\.17\r\nSet-Cookie:\x20cwpsrv-6399a5cbdae68add3db36ca7f079da
+SF:0c=i6n3oklpctca6b5snhdg8cakn4;\x20path=/\r\nExpires:\x20Thu,\x2019\x20N
+SF:ov\x201981\x2008:52:00\x20GMT\r\nCache-Control:\x20no-store,\x20no-cach
+SF:e,\x20must-revalidate\r\nPragma:\x20no-cache\r\nLocation:\x20/login/ind
+SF:ex\.php\r\n\r\n")%r(HTTPOptions,139,"HTTP/1\.1\x20405\x20Not\x20Allowed
+SF:\r\nServer:\x20cwpsrv\r\nDate:\x20Thu,\x2020\x20Jul\x202017\x2009:20:35
+SF:\x20GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20167\r\nConn
+SF:ection:\x20close\r\n\r\n<html>\r\n<head><title>405\x20Not\x20Allowed</t
+SF:itle></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>405\x20Not\x
+SF:20Allowed</h1></center>\r\n<hr><center>cwpsrv</center>\r\n</body>\r\n</
+SF:html>\r\n")%r(RTSPRequest,A7,"<html>\r\n<head><title>400\x20Bad\x20Requ
+SF:est</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x2
+SF:0Bad\x20Request</h1></center>\r\n<hr><center>cwpsrv</center>\r\n</body>
+SF:\r\n</html>\r\n")%r(RPCCheck,139,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nServer:\x20cwpsrv\r\nDate:\x20Thu,\x2020\x20Jul\x202017\x2009:20:36\x2
+SF:0GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20167\r\nConnect
+SF:ion:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</titl
+SF:e></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20R
+SF:equest</h1></center>\r\n<hr><center>cwpsrv</center>\r\n</body>\r\n</htm
+SF:l>\r\n")%r(DNSVersionBindReq,139,"HTTP/1\.1\x20400\x20Bad\x20Request\r\
+SF:nServer:\x20cwpsrv\r\nDate:\x20Thu,\x2020\x20Jul\x202017\x2009:20:37\x2
+SF:0GMT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20167\r\nConnect
+SF:ion:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</titl
+SF:e></head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20R
+SF:equest</h1></center>\r\n<hr><center>cwpsrv</center>\r\n</body>\r\n</htm
+SF:l>\r\n")%r(Help,139,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nServer:\x20c
+SF:wpsrv\r\nDate:\x20Thu,\x2020\x20Jul\x202017\x2009:20:38\x20GMT\r\nConte
+SF:nt-Type:\x20text/html\r\nContent-Length:\x20167\r\nConnection:\x20close
+SF:\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n
+SF:<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></
+SF:center>\r\n<hr><center>cwpsrv</center>\r\n</body>\r\n</html>\r\n");
+Service Info: Host:  9579cb.offshoreracks.com; OS: Red Hat Enterprise Linux 7; CPE: cpe:/o:redhat:enterprise_linux:7
+
+Read data files from: /usr/local/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jul 20 17:20:56 2017 -- 1 IP address (1 host up) scanned in 65.84 seconds
