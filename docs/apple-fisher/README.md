@@ -12,8 +12,7 @@
 点击链接跳转如下域名的地址（典型的钓鱼域名）
 accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com
 
-[证书检查结果]
-(https://myssl.com/accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com)
+[证书检查结果](https://myssl.com/accountupdate.updatebillinginfo.appleid.cmd02.bill82-appleid.com)
 ![certificate1.jpg](certificate1.jpg)
 比较熟悉数字证书的应该差不多确认这是一个钓鱼网站了。
 
